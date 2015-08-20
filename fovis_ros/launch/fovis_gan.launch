@@ -13,7 +13,7 @@
     <remap from="/camera/depth_registered/camera_info" to="$(arg camera)/depth_registered/camera_info" />
     <remap from="/camera/depth_registered/image_rect" to="$(arg camera)/depth_registered/image_raw" />
     <param name="approximate_sync" type="bool" value="True" />
-    <param name="publish_tf" type="bool" value="False" />
+    <param name="publish_tf" type="bool" value="True" />
       </node>
+   <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 base_link camera_link 100" />
    </launch>
-
